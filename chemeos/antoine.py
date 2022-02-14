@@ -26,7 +26,7 @@ def saturation_pressure(coeff_a_val,coeff_b_val,coeff_c_val, temp,is_log10 = Tru
     Parameters
         - coeff_a_val is Antoine coefficient A.
         - coeff_b_val is Antoine coefficient B.
-        - coeff_c_val is Antoine coe
+        - coeff_c_val is Antoine coefficient C.
         - temp is the temperature
     Note: It is the users responsibility to ensure units are consistent.
     """
