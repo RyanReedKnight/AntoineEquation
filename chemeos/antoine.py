@@ -9,8 +9,8 @@ _COEFF_B_KEY = 'B'
 _COEFF_C_KEY = 'C'
 
 # Temperature limit keys
-_UPPER_TEMPERATURE_LIMIT_KEY = "upper temperature limit"
-_LOWER_TEMPERATURE_LIMIT_KEY = "lower temperature limit"
+_UPPER_TEMPERATURE_LIMIT_KEY = "UTL"
+_LOWER_TEMPERATURE_LIMIT_KEY = "LTL"
 
 # Global string variables to denote pressure units.
 
@@ -167,22 +167,22 @@ class AntoineCoefficientLib:
          " is within the bounds of.")
 
     def get_a(self,species_name,temperature):
-        """ Returns coefficnet A if the temperature is not out of range."""
+        """ Returns coefficnet A if the temperature is within range."""
 
         return self.get_coeffs(species_name,temperature)[_COEFF_A_KEY]
 
     def get_b(self,species_name,temperature):
-        """ Returns coefficnet B is the temperature is not out of range."""
+        """ Returns coefficnet B is the temperature is within range."""
 
         return self.get_coeffs(species_name,temperature)[_COEFF_B_KEY]
 
     def get_c(self,species_name,temperature):
-        """ Returns coefficnet C is the temperature is not out of range."""
+        """ Returns coefficnet C is the temperature is within range."""
 
         return self.get_coeffs(species_name,temperature)[_COEFF_C_KEY]
 
     def get_saturation_pressure(self,species_name,temperature):
-        """If species is in dictionary and temperature is in range,\
+        """If species is in dictionary and temperature is within range,\
          returns saturation pressure."""
 
         if species_name not in self.antoine_coeff_lib:
